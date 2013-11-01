@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
@@ -15,14 +15,9 @@ def endless_loop(a, b):
     while (count < b):
        print 'The count is:', count
        array.append(count)
-       count += 1
-    return "Good bye!"
-
-
+       count += 1 
+    return jsonify(count_array=array)
 
 if __name__ == '__main__':
   port = int(os.environ.get('PORT',5001))
   app.run(host='0.0.0.0', port=port)
-
-
-
