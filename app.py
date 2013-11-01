@@ -16,7 +16,7 @@ def endless_loop(a, b):
        print 'The count is:', count
        array.append(count)
        count += 1
-    print "Good bye!"
+    return "Good bye!"
 
 
 
